@@ -1,0 +1,439 @@
+*{
+    font-family: 'Dancing+Script', cursive;    margin:0; padding:0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+    outline: none;
+    text-decoration: none; /* Removes default underlines on links */
+    transition: all .2s linear; /* Smooth transitions for hover effects */
+    text-transform: capitalize; /* Capitalizes the first letter of each word */
+}
+
+*::selection{
+    background:#eaad04; /* Highlight color for text selection */
+    color:#fff; /* Text color for selection */
+}
+/* Base HTML and Body Styles */
+html{
+    font-size: 60.5%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    width: 100%;
+    display: flex; /* Flexbox for alignment */
+    align-items: center;
+    justify-content: space-between; /* Spaces out logo and navigation */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the header appears above other elements */
+    padding: 2px;
+    background: linear-gradient(rgba(0, 0, 0, 0.088), rgba(0, 0, 0, 0.142)), 
+                url('../img/header.background.png') no-repeat center center; /* Combines linear gradient and background image */
+    background-size: cover; /* Ensures the image covers the header without repeating */
+}
+
+/* Logo Container */
+header .logo{
+    font-size: 2.5rem;
+    color:#ffffff;
+}
+
+/* Logo Image */
+header .logo img{
+    padding: 1px;
+    height: 100px;
+    width: 80%; /* Sets the width relative to the container */
+    margin-left: 9rem; /* Adds space to the left of the logo */
+    margin-right: 2rem; /* Adds space to the right of the logo */
+}
+
+/* Logo Hover Effect */
+.logo img:hover {
+    transform: scale(1.1); /* Slightly enlarges the logo image on hover */
+}
+
+/* Navbar Styling */
+header .navbar ul{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* Spaces out menu items */
+    list-style: none; /* Removes default bullet points */
+}
+
+/* Navbar Links */
+header .navbar ul li a{
+    font-size: 3rem;
+    margin-left: -5rem; /* Negative margin to adjust positioning */
+    color:#fff7f7;
+    position: relative; /* Allows positioning for pseudo-elements */
+    margin-right: 12rem;
+}
+/* Underline Effect for Links */
+header .navbar ul li a::before{
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    bottom:-.5rem; right:0; 
+    width:0%;
+    height:.2rem;
+    background:#2ff6f6;
+    transition: .3s linear; /* Smooth transition effect */
+}
+
+/* Underline Activation and Hover */
+header .navbar ul li a.active::before,
+header .navbar ul li a:hover::before{
+    left:0; /* Starts the underline from the left */
+    width:100%; /* Expands to the full width of the link */
+}
+/* Responsive Media Query */
+@media (max-width: 768px) {
+    /* Adjust logo */
+    header .logo img {
+        margin-left: 2rem;
+        width: 60%; /* Reduce logo size */
+    }
+}
+
+/* Home Section Styling */
+.home {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically centers content */
+    justify-content: space-between; /* Pushes text and image to opposite sides */
+    padding: 50px 20px;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f8f9fa;
+    background-image: url(../img/img2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box; /* Includes padding in height/width */
+    background: linear-gradient(rgba(0, 0, 0, 0.088), rgba(0, 0, 0, 0.142)), url('../img/img2.png');
+}
+
+/* Text Content Styling */
+.home .text-content {
+    flex: 1; /* Takes up half the space */
+    padding-right: 20px; 
+}
+.home h1 {
+    font-size: 5rem; /* Adjusts heading size */
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left; /* Aligns text to the left */
+}
+
+.home p {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    color: #3d3d42;
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Image Content Styling */
+.home .image-content {
+    flex: 1; /* Takes up the remaining half space */
+    text-align: center; /* Centers the image horizontally */
+}
+.home .image-content img {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 50px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    margin-top: 10px;
+}
+
+/* About Section Styling */
+.about {
+    background-color: #f7f9fc; /* Light background color for contrast */
+    text-align: center; /* Centers the text content */
+    color: #333; /* Darker color for readability */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    background: linear-gradient(rgba(0, 0, 0, 0.088), rgba(0, 0, 0, 0.142)), 
+                url('../img/img3.png') no-repeat center center; /* Combines gradient and image */
+    background-size: cover; /* Ensures the image scales proportionally to cover the section */
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+
+.about h2 {
+    font-size: 8rem; /* Large heading size */
+    margin-bottom: 20px; /* Space below the heading */
+    font-family: 'Dancing Script', cursive; /* Custom elegant font */
+    color: #007BFF; /* Eye-catching blue color */
+    white-space: nowrap; /* Ensures the text stays in one line */
+    text-align: right; /* Aligns the text to the right */
+    width: 100%; /* Ensures the heading takes full width */
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.about p {
+    font-size: 1.2rem; /* Medium-sized paragraph text */
+    margin-bottom: 30px; /* Space below the paragraph */
+    line-height: 1.8; /* Improves readability */
+    color: #555; /* Softer text color for secondary information */
+}
+/* Video Styling */
+.about video {
+    max-width: 100%; /* Makes video responsive */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    margin-top: 20px; /* Space between text and video */
+    margin-right: 10px;
+}
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .about {
+        display: flex; /* Flexbox layout for larger screens */
+        align-items: center; /* Vertically centers items */
+        justify-content: space-between; /* Spaces out text and video */
+        text-align: left; /* Align text to the left */
+    }
+
+    .about h2 {
+        font-size: 3rem; /* Larger heading for bigger screens */
+    }
+
+    .about p {
+        font-size: 1.5rem; /* Larger paragraph size */
+    }
+
+    .about video {
+        max-width: 45%; /* Limits video width to fit next to text */
+    }
+}
+
+/* Flavor Section Styling */
+.Product-section {
+    padding-top: 100px; /* Space around the section */
+    padding-bottom:100px;
+    text-align: center; /* Centers the text inside the section */
+    background-color: #f8f8f8; /* Light background for a clean look */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), 
+                url('../img/img4.png'); /* Gradient overlay and image */
+    background-repeat: no-repeat; /* Ensures the image does not repeat */
+    background-position: center; /* Centers the image */
+    background-size: cover; /* Ensures the image covers the section fully */
+    box-sizing: border-box; /* Keeps padding and border within width/height */
+}
+/* Flavor Section Heading */
+.Product-section h2 {
+    font-size: 5rem; /* Larger heading size */
+    color: #007BFF; /* A vibrant blue color for the heading */
+    font-family: 'Dancing Script', cursive; /* Custom font for elegance */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Flavor Grid Layout */
+.Product-grid{
+    display: grid; /* Using CSS grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid with min and max widths */
+    gap: 50px; /* Space between the grid items */
+    justify-items: center; /* Centers the grid items */
+}
+/* Individual Flavor Box Styling */
+.Product {
+    padding: 20px; /* Space inside each flavor box */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Centers content inside the flavor box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+.Product img {
+    width: 100%; /* Makes the image responsive */
+    border-radius: 10px; /* Rounded corners for the image */
+    max-height: 200px; /* Limits image height */
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+}
+/* Flavor Heading Styling */
+.Product h3 {
+    font-size: 1.8rem; /* Slightly smaller font for the flavor title */
+    color: #333; /* Dark text color */
+    margin-top: 15px; /* Space between the image and title */
+    font-family: 'Dancing Script', cursive; /* Elegant font */
+}
+
+/* Hover Effect for Flavor Box */
+.Product:hover {
+    transform: translateY(-10px); /* Slightly lifts the box */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+/* Image styles to center it */
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .Product h3 {
+        font-size: 1.5rem; /* Smaller font size for the title on smaller screens */
+    }
+}
+/*footer section starts here */
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), 
+                url('../img/img5.png'); /* Gradient overlay with image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    box-sizing: border-box; /* Keeps padding and border within width/height */
+    padding: 20px; /* Space inside the footer */
+    text-align: center; /* Centers the content inside the footer */
+    color: #333; /* Text color for contrast */
+}
+/* Footer Container */
+.footer .box-container{
+    display: flex;
+    margin: 0 auto 20px; 
+    justify-content: center;
+    flex-wrap: wrap; /* Allows boxes to wrap onto a new line */
+}
+/* Footer Boxes */
+.footer .box-container .box{
+    flex:1 1 30rem; /*Responsive box size with minimum width of 30rem */
+    margin:2rem; /* Space around each box */
+}
+/* Footer Box Headings */
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color:var(--gold); /* Custom variable color for headings */
+}
+/* Footer Box Paragraphs */
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color:#333;
+    padding:1rem 0; /* Spacing above and below the paragraph */
+}
+/* Icons in Footer Box Paragraphs */
+.footer .box-container .box p i{
+    padding:0 .5rem;
+    color:var(--gold);
+}
+/* Footer Box Forms */
+.footer .box-container .box form{
+    color:#21201f;
+}
+/* Buttons in Footer Box */
+.footer .box-container .box button{
+    
+    background-color: #00ffffa4;
+    color: #333;
+    margin-left: 70px;
+    padding: 10px;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    border-radius: 5rem; /* Makes the button rounded */
+}
+/* Button Hover Effect */
+.footer .box-container .box button:hover {
+    background-color: #8cff00; /* Change the color on hover */
+    color: #a20909;
+}
+/* Center Align for the Second Footer Box */
+.footer .box-container .box:nth-child(2){
+    text-align: center;
+}
+/* Footer Links */
+.footer .box-container .box a{
+    font-size: 1.8rem;
+    display:block; /* Makes links appear as block elements */
+    color:#333;
+    padding:.5rem 0;
+}
+/* Footer Link Hover Effect */
+.footer a:hover{
+    text-decoration: underline;
+}
+/* media queries  */
+@media (max-width:768px){
+
+    html{
+        font-size: 30%; /* Adjusts base font size for smaller screens */
+    }
+    
+    /* Show the menu icon */
+    header #menu{
+        display: block;
+    }
+    
+    /* Navbar Styling for Small Screens */
+    header .navbar{
+        position: fixed;
+        top:-120%; left:0;
+        width:100%;
+        background:#fff;
+        opacity: 0; /* Initially invisible */
+    }
+
+    /* Navbar List Styling */
+    header .navbar ul{
+        padding:2rem 0;
+        flex-flow: column;
+        justify-content: center;
+    }
+    
+    /* Navbar Links for Small Screens */
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        color:#333;
+        display: block;
+        margin:1rem 0;
+    }
+
+    header .navbar ul li a::before{
+        background:#333;
+    }
+}
+/* Rotate Close Icon */
+.fa-times{
+    transform: rotate(180deg);
+}
+
+/* Navbar Open State */
+header .navbar.nav-toggle{
+    top:7.4rem;
+    opacity: 1;
+}
+
+/* Center Align Content for Small Screens */
+.home .content{
+    text-align: center;
+}
+
+/* Feature Description Styling */
+.features .description{
+    width:auto;
+    padding:1rem;
+}
+/* Contact Form Styling */
+.contact form{
+    width:95%;
+}
+/* Styles for Screen Widths <= 500px */
+@media (max-width:500px){
+
+    html{
+        font-size: 50%; /* Increases font size slightly for very small screens */
+    }
+
+    .home .content h1{
+        font-size: 3.5rem;
+    }
+
+    .about .image img{
+        width:80%;
+        height:auto;
+    }
+
+    /* Contact Form Input Fields */
+    .contact form .inputBox input{
+        width:100%; 
+    }
+}
+
