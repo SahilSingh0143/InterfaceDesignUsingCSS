@@ -1,0 +1,258 @@
+
+body, h1, h2, p, ul, li, a, input, button, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Header */
+/* Header Section Styling */
+header {
+    background-color: #1a2637; /* Dark background color */
+    padding: 20px 0; /* Padding for top and bottom */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Space between navigation items */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Maximum width for the content */
+    margin: 0 auto; /* Center align the entire navigation block */
+    padding: 0 20px; /* Padding for left and right */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex; /* Flexbox to align navigation items horizontally */
+    justify-content: space-between; /* Distribute the list items evenly */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    flex: 1; /* Take up the remaining space */
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 15px; /* Space between navigation items */
+}
+
+nav ul li a {
+    color: white; /* White text color for the links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: 500; /* Make the link text weight semi-bold */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+nav ul li a:hover {
+    color: #20b2aa; /* Change color to turquoise on hover */
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Align logo vertically */
+}
+
+.logo img {
+    width: 200px; /* Adjust logo size */
+    height: auto; /* Keep logo aspect ratio */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on mobile */
+        text-align: center; /* Center-align text for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack list items vertically */
+        width: 100%; /* Take up full width */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add space between items when stacked */
+    }
+
+    .logo img {
+        width: 100px; /* Reduce logo size on mobile */
+    }
+}
+
+
+
+/* Masthead */
+.masthead {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.masthead img {
+    width: 100%;
+    height: auto;
+}
+.masthead .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.masthead h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+.masthead .arrow {
+    width: 30px;
+    height: 30px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    margin: 0 auto;
+}
+
+/* Angled Section */
+.angled-section {
+    background-color: #002D5B;
+    color: white;
+    padding: 40px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    text-align: center;
+}
+
+.angled-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.angled-section p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.image-section {
+    background-color: white;
+    padding: 40px 20px;
+}
+
+.image-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-grid img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+.video-placeholder {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 56.25%; 
+    background-color: #333;
+    position: relative;
+}
+.video-placeholder .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #00BFFF;
+    text-align: center;
+    padding: 40px 20px;
+}
+.contact-section h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 20px;
+}
+.contact-section .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #00BFFF;
+    background: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.contact-section .button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #002D5B;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+}
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+footer input, footer textarea, footer button {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+footer button {
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+footer button:hover {
+    background-color: #007BFF;
+}
+footer p {
+    font-size: 0.9rem;
+}
+.footer-content img{
+    height: 10em;
+}
+name {
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0; /* Add vertical padding for space */
+    height: 150px; /* Ensure enough height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding doesn't affect height */
+}
