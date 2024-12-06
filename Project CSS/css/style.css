@@ -1,0 +1,545 @@
+/* Global Styles */
+body {
+    font-family: 'Yuji Mai', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+    background-color: #f0f0f0;
+}
+
+/* Header Style */
+header {
+    font-family: 'Lobster', cursive;
+    display: flex; /* Makes header content flexbox */
+    justify-content: space-between; /* Spaces out items evenly */
+    align-items: center; /* Vertically centers items */
+    padding: 20px;
+    height: 80px;
+    color: white;
+    background:url('../img/header.background.png'); 
+    background-size: cover; /* Ensures background covers header */
+}
+
+/* Logo Style */
+header .logo img {
+    max-height: 150px;
+    max-width: 100%; /* Ensures image doesn’t exceed container */
+    height: auto; /* Maintains aspect ratio */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+header .logo img:hover {
+    transform: scale(1.1); /* Scales the logo slightly on hover */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+nav ul li a {
+    font-family: 'Lobster', cursive;
+    color: white;
+    text-decoration: none; /* Removes underline */
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c07325; /* Gold color for hover effect */
+}
+
+/* Home Section */
+.home {
+    position: relative; /* Position relative for child elements */
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Horizontal padding */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Background Video Style */
+.background-video {
+    position: absolute; /* Absolute positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Covers the entire container */
+    z-index: -1; /* Behind other elements */
+}
+
+/* Home Section Content */
+.home-content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+.home-content p {
+    font-family: 'Dancing Script', cursive; /*font used here*/
+    font-size: 1.9rem;
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Call-to-Action Button Style */
+.cta-button {
+    background-color: #c07325;
+    color: white;
+    padding: 15px 30px;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none; /* Removes underline */
+    border-radius: 50px; /* Rounded corners */
+    display: inline-flex; /* Inline flexbox for content */
+    align-items: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Button shadow */
+}
+
+.cta-button:hover {
+    transform: translateY(-5px); /* Move button upwards on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.cta-button svg {
+    margin-left: 8px; /* Adds spacing between the button text and icon */
+}
+
+/* Product Overview Section */
+.products-overview {
+    display: flex; /* Aligns items in a row */
+    justify-content: space-around;
+    padding: 50px 20px; /* Adds padding around the section */
+    background:url('../img/productbackground2.png'); 
+    background-size: cover;
+}
+
+.product-item {
+    text-align: center; /* Centers text inside the product item */
+    width: 30%; /* Sets width of each product item */
+    padding: 20px;
+    border: 1px solid #ddd; /* Adds a light border */
+    border-radius: 10px; /* Rounds the corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.product-item .product-image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    max-width: 300px; /* Set max width for the image */
+    margin-bottom: 15px; /* Space between image and text */
+    border-radius: 8px; /* Optional: rounded corners for the image */
+    object-fit: cover; /* Ensures image covers the container without distortion */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Lifts the product item on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Typography for product title */
+.product-item h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.8rem;
+    color:#ffffff;
+    margin-bottom: 15px; /* Space below the title */
+}
+
+.product-item p {
+    font-family: 'Lobster', cursive;
+    font-size: 1rem;
+    color: #fff9f9;
+    margin-bottom: 20px; /* Space below description */
+}
+
+.product-item a {
+    font-family: 'Lobster', cursive;
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+}
+
+.product-item a:hover {
+    text-decoration: underline;
+}
+
+/*feature section*/
+.features {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between;
+  padding: 50px; /* Adds padding */
+  background: url('../img/service.background.png'); 
+    background-size: cover; /* Ensures image covers background */
+}
+
+/* Individual feature item styles */
+.feature {
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+  align-items: center;
+  text-align: center;
+}
+
+/* Icon size for feature */
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Title for feature section */
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600; /* Bold text */
+  margin: 20px;
+  color: #e3dddd;
+}
+
+/* Styles for feature description text */
+.featureDesc {
+  color: rgb(249, 242, 242);
+  width: 50%;
+  height: 100px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .features {
+      padding: 10px; /* Reduce padding on smaller screens */
+    }
+  
+    .featureIcon {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .featureTitle {
+      font-size: 16px; /* Smaller text size */
+    }
+  
+    .featureDesc {
+      width: 90%; /* Further adjust width */
+      font-size: 14px; /* Smaller font size for descriptions */
+    }
+  }
+
+/* About Page Styles */
+.about-home {
+    font-family: 'Lobster', cursive;
+    padding: 50px 20px; /* Top/bottom and left/right padding */
+    text-align: center;
+    background-image: url('../img/about2.png'); 
+    background-position: center; /* Centers the image */
+}
+
+/* Styling for the heading in about section */
+.about-home h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    color: #222020;
+}
+
+/* Paragraph styling for about section */
+.about-home p {
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    color: #f2eaea;
+    max-width: 800px; /* Limits width of text block */
+    margin: 0 auto; /* Centers the block horizontally */
+}
+
+/* Styling for the vision section */
+.vision {
+    font-family: 'Lobster', cursive;
+    padding: 50px 20px;
+    text-align: center;
+    background: url('../img/about3.png'); 
+    background-size: cover;
+}
+
+.vision p {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+    color: #272525;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Styling for the brand story section */
+.brand-story {
+    font-family: 'Lobster', cursive;
+    padding: 50px 20px;
+    text-align: center;
+    background: url('../img/about4.png'); 
+    background-size: cover;
+}
+
+.brand-story p {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Values Section */
+.values {
+    font-family: 'Lobster', cursive;
+    padding: 50px 20px;
+    text-align: center;
+    background: url('../img/about1.png'); 
+    background-size: cover;
+}
+
+/* General heading style */
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1d1c1c;
+}
+
+.value-item {
+    font-family: 'Lobster', cursive;
+    margin: 30px 0;
+}
+
+/* Subheading for values items */
+.value-item h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #802f1d;
+}
+
+/* Paragraph styling for value items section */
+.value-item p {
+    font-family: 'Lobster', cursive;
+    font-size: 1.1rem;
+    color: #040303;
+}
+
+/* contact page */
+.contact-home {
+    padding: 50px 20px;
+    text-align: center;
+    background: url('../img/productcontainer.png') no-repeat center center;
+    background-size: cover; /* Ensures the background image covers the area */
+    color: rgb(255, 255, 255);
+}
+
+/* Heading for contact home section */
+.contact-home h1 {
+    font-family: "Spirax", system-ui;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+/* Paragraph in contact home section */
+.contact-home p {
+    font-family: "Spirax", system-ui;
+    font-size: 1.2rem;
+}
+
+/* Section containing the contact form */
+.contact-form-section {
+    font-family: "Creepster", system-ui;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    background:url('../img/about4.png'); 
+    background-size: cover; 
+}
+
+/* Container for the form */
+.form-container {
+    background:url('../img/form.png'); 
+    background-size: cover;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Limits form width */
+}
+
+/* Labels for form inputs */
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* Styles for input fields and textareas */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Submit button styles */
+form button {
+    font-family: "Creepster", system-ui;
+    width: 100%;
+    background-color: #c07325;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.2rem;
+}
+
+/* Hover effect for button */
+form button:hover {
+    background-color: #aa5d1f;
+}
+
+/*product page*/
+.products-header {
+    text-align: center;
+    padding: 50px 20px;
+    background:url('../img/product.header.png'); 
+    background-size: cover;
+}
+
+ /* Heading for product header */
+.products-header h1 {
+    font-size: 3rem;
+    color: #bc6003;
+}
+
+/* Paragraph under product header */
+.products-header p {
+    font-size: 1.2rem;
+    color: #f3e9e9;
+}
+/* section for product categories */
+.product-category {
+    padding: 40px 20px;
+    background-image: url(../img/productbackground2.png);
+}
+
+/* Heading for product categories */
+.product-category h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c07325;
+}
+
+/* Grid layout for displaying products */
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+}
+
+/* Individual product item styles */
+.product-item {
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    background-image: url(../img/productcontainer.png);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    color: #090808;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 1.2rem;
+    color: #e97612;
+}
+
+/* Hover effect for product items */
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Style */
+footer {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+footer {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    padding: 20px;
+    background-image: url(../img/footer.png);
+    background-size: cover;
+    color: white;
+}
+
+footer a {
+    font-family: 'Lobster', cursive;
+    color: #ff8307;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .products-overview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}

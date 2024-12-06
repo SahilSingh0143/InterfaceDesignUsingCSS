@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Luxe | Fashion Accessories</title>
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lobster&family=Protest+Revolution&family=SUSE:wght@100..800&family=Satisfy&family=Sevillana&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!--adding logo image-->
+        <a href="#" class="logo"><img src="img/logo.png" alt="Aura Luxe Logo"></a>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Home Section with Background Video -->
+        <section class="home">
+            <video autoplay muted loop class="background-video">
+                <source src="videos/logoanimantion.mp4" type="video/mp4">
+                <!-- Fallback message for browsers that don't support video -->
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Content over the video -->
+            <div class="home-content">
+                <h1>Discover the Latest in Fashion Accessories</h1>
+                <p>Elevate your style with our exclusive collection.</p>
+                <a href="products.html" class="cta-button">Shop Now
+                    <!-- SVG Icon for decorative arrow -->
+                    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 4.354l8.061 4.646v9.308L12 22.646 3.939 18.308V9l8.061-4.646zm0-2L2 9v11.654L12 26l10-5.346V9L12 2.354z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Product Overview Section -->
+        <section class="products-overview">
+            <div class="product-item">
+                <h2>Scarves</h2>
+                <img src="img/scarves.jpg" alt="Scarves" class="product-image">
+                <p>Elegant designs to match any outfit.</p>
+                <a href="products.html">View Collection</a>
+            </div>
+            <div class="product-item">
+                <h2>Hats</h2>
+                <img src="img/hats.jpg" alt="hats" class="product-image">
+                <p>Stay stylish and protected.</p>
+                <a href="products.html">View Collection</a>
+            </div>
+            <div class="product-item">
+                <h2>Sunglasses</h2>
+                <img src="img/sunglasses.jpg" alt="sunglasses" class="product-image">
+                <p>Modern eyewear for every occasion.</p>
+                <a href="products.html">View Collection</a>
+            </div>
+        </section>
+
+        <!-- Features section with icons and descriptions -->
+    <div class="features">
+        <!-- Individual feature items -->
+        <div class="feature">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+    </main>
+    
+    <!--footer section-->
+    <footer>
+        <p>&copy; 2024 Aura Luxe. All rights reserved.</p>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+</body>
+</html>
